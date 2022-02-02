@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -25,7 +31,6 @@ code {
   padding: 1.2rem;
   font-size: 1.5rem;
   font-weight: 600;
-  width: 30%;
 }
 
 .categories li {
@@ -37,14 +42,13 @@ code {
 }
 
 ul.categories {
-  width: 30%;
-  padding-top: 0.5rem;
+  padding-top: 1.7rem;
 }
 
 img.cart-shoping {
   width: 4rem;
   height: 4rem;
-  padding-top: 0.3rem;
+  margin-top: 0.5rem;
 }
 
 span.item-counter {
@@ -62,4 +66,11 @@ span.item-counter {
 
 .cart-shoping-area {
   margin-right: 1.2rem;
+}
+
+/* Items Section*/
+
+.items-container {
+  margin-top: 1rem;
+  text-align: center;
 }
