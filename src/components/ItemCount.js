@@ -20,10 +20,9 @@ const ItemCount = ( {stock, initial, onAdd}) => {
 
     return (
         <div className="item-count">
-            <button onClick={addItem}>+</button>
-            <p>{items}</p>
-            <p>{itemsInStock}</p>
-            <button onClick={subtractItem}>-</button>
+            <span className="count text-center" onClick={subtractItem}>-</span>
+            <span className="display-items text-center">{items}</span>
+            <span className="count text-center" onClick={addItem}>+</span>
         </div>
     )
 }

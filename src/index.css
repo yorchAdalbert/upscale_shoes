@@ -1,3 +1,5 @@
+/* Globals settings*/
+
 * {
   margin: 0;
   padding: 0;
@@ -18,11 +20,21 @@ code {
     monospace;
 }
 
+span {
+  display: inline-block;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/*Navigation*/
+
 .nav-bar {
   display: flex;
   justify-content: space-between;
   height: 5rem;
-  background-color: #602f6b;
+  background-color: #3e1e46;
   box-shadow: 5px 10px 8px #888888;
 }
 
@@ -52,7 +64,6 @@ img.cart-shoping {
 }
 
 span.item-counter {
-  display: inline-block;
   position: relative;
   bottom: 2rem;
   right: 0.4rem;
@@ -73,4 +84,33 @@ span.item-counter {
 .items-container {
   margin-top: 1rem;
   text-align: center;
+}
+
+/*Components*/
+
+.item-count {
+  width: 10.1%;
+  height: 1.7rem;
+  margin: 0.5rem 0 0 0.5rem;
+  border: 1px solid gray;
+  border-radius: 3px;
+}
+
+.count {
+  color: #643070;
+  width: 30%;
+}
+
+span.count:hover {
+  user-select: none;
+  cursor: pointer;
+  height: 1.55rem;
+  background-color: #3e1e46;
+  color: white;
+  border-radius: 3px;
+}
+
+.display-items {
+  width: 40%;
+  user-select: none;
 }
