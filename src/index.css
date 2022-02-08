@@ -86,7 +86,10 @@ span.item-counter {
   text-align: center;
 }
 
-/*Components*/
+/*Components
+==========================================*/
+
+/*Button count and subtrac*/
 
 .item-count {
   width: 10.1%;
@@ -113,4 +116,23 @@ span.count:hover {
 .display-items {
   width: 40%;
   user-select: none;
+}
+
+/*Item cards*/
+
+.item-section {
+  display: grid;
+  grid-template-columns: repeat(4, 22%);
+  height: 60vh;
+  grid-gap: 30px 3%;
+}
+
+.item-card {
+  width: 100%;
+  border: 1px solid gray;
+}
+
+img.img-item {
+  width: 70%;
+  height: 20vh;
 }
