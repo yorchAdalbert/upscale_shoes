@@ -5,9 +5,11 @@ import { getProducts, products } from "../utils/products";
 const ItemList = () => {
     const[items, setItems] = useState([])
 
-    getProducts(products, 2000)
-    .then((res) => setItems(res))
-    .catch((e) => console.log(e))
+    useEffect(() => {
+        getProducts(products, 2000)
+        .then((res) => setItems(res))
+        .catch((e) => console.log(e))
+    },[])
 
     return (
         <section className="item-section">
