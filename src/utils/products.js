@@ -10,6 +10,7 @@ export const products = [
         id: 2,
         imgSource: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKdiJD-88ENH9hVidMTq6EM1LNrg-PXR2UxA&usqp=CAU", 
         title: 'Nike Air Force 1',
+        description: 'El fulgor vive en el Air Force 1, el ícono del básquetbol que te brinda un estilo único. El AF1 fue lanzado en 1982 y fue rápidamente adoptado por los jugadores más importantes de la NBA quienes aparecieron en su primera campaña publicitaria; su versatilidad hizo que su uso se extendiera más allá de las canchas.',
         price: "$75",
         stock: "2"
     },
@@ -26,6 +27,13 @@ export const products = [
         title: 'Nike Air Max 90',
         price: "$80",
         stock: "10"
+    },
+    {
+        id: 5,
+        imgSource: "http://http2.mlstatic.com/D_869470-MLA48280172654_112021-O.jpg",
+        title: "Zapatillas Nike Court Legacy 0197 Grid",
+        price: 9998.9,
+        stock: '20'
     }
 ]
 
@@ -34,4 +42,12 @@ export const getProducts = (data, timeout) =>
         setTimeout(() => {
             res(data)
         }, timeout)
-    )
+)
+
+
+export const getItem = (item, delay) => 
+    new Promise((res) => 
+        setTimeout(() => {
+            res(item)
+    }, delay)
+)

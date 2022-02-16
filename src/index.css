@@ -28,6 +28,14 @@ span {
   text-align: center;
 }
 
+.text-right {
+  text-align: right;
+}
+
+p {
+  margin: 0.8rem 1.5rem 0;
+}
+
 /*Navigation*/
 
 .nav-bar {
@@ -145,4 +153,34 @@ img.img-item {
   height: 2.5rem;
   background-color: #643070;
   color: white;
+}
+
+/* Pages
+==================================*/
+
+/* Detail item page*/
+
+.item-detail {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-information {
+  display: flex;
+}
+
+.image-description {
+  width: 250px;
+  height: 300px;
+  padding-top: 30px;
+}
+
+.item-description {
+  width: 450px;
+  border: 1px solid #643070;
+  box-shadow: 5px 10px 8px #888888;
 }

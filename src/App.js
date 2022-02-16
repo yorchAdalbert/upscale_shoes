@@ -1,15 +1,17 @@
 import NavBar from "./components/NavBar";
 import ItemListContainer from "./components/ItemListContainer";
 import ItemCount from "./components/ItemCount";
+import ItemDetailContainer from "./components/ItemDetailContainer";
+import Input from "./components/Input";
 
 function App() {
   return (
       <div className="App">
         <NavBar />
-        <ItemListContainer
+        {/*<ItemListContainer
           greeting='Nike / Man'
-        />
-        <ItemCount initial='2' stock='20' />
+        />*/}
+        <ItemDetailContainer />
     </div>
   );
 }
