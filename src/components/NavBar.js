@@ -1,12 +1,17 @@
-import Brand from "./Brand";
-import Categories from "./Categories";
 import CartWidget from "./CartWidget";
 
 const NavBar = () => {
     return (
         <div className="nav-bar">
-            <Brand />
-            <Categories />
+             <span className="brand">
+                Upscale Shoes
+            </span>
+            <ul className="categories">
+                <li>Nike</li>
+                <li>Puma</li>
+                <li>Adidas</li>
+                <li>Vans</li>
+            </ul>
             <CartWidget />
         </div>
     )
