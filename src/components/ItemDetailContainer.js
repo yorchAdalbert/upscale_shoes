@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import { products, getItem, getProducts } from "../utils/products"
+import { products, getItem } from "../utils/products"
 import ItemDetail from "./ItemDetail"
 
 const ItemDetailContainer = () => {

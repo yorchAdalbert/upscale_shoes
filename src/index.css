@@ -36,6 +36,10 @@ p {
   margin: 0.8rem 1.5rem 0;
 }
 
+.text-decor {
+  text-decoration: none;
+}
+
 /*Navigation*/
 
 .nav-bar {
@@ -51,7 +55,6 @@ p {
   padding: 1.2rem;
   font-size: 1.5rem;
   font-weight: 600;
-  text-decoration: none;
 }
 
 .categories li {

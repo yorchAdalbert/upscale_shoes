@@ -1,6 +1,6 @@
 import Item from "./Item";
 
-const ItemList = ( { item }) => (
+const ItemList = ( { item } ) => (
     <section className="item-section">
         {
             item.length > 0 ? 
