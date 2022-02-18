@@ -8,10 +8,10 @@ const NavBar = () => {
                 Upscale Shoes
             </Link>
             <ul className="categories">
-                <li>Nike</li>
-                <li>Puma</li>
-                <li>Adidas</li>
-                <li>Vans</li>
+                <Link to={'/category/nike'} ><li>Nike</li></Link>
+                <Link to={'/category/puma'} ><li>Puma</li></Link>
+                <Link to={'/category/adidas'} ><li>Adidas</li></Link>
+                <Link to={'/category/vans'} ><li>Vans</li></Link>
             </ul>
             <CartWidget />
         </div>
