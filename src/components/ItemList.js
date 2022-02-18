@@ -22,6 +22,7 @@ const ItemList = () => {
                             imgSource={item.imgSource} 
                             price={item.price} 
                             stock={item.stock}
+                            id={item.id}
                         /> ) 
                     : 
                     <p>Loading...</p> 
