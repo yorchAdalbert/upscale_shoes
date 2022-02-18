@@ -1,34 +1,22 @@
-import { useState, useEffect } from "react";
 import Item from "./Item";
-import { getProducts, products } from "../utils/products";
 
-const ItemList = () => {
-    const[items, setItems] = useState([])
+const ItemList = ( { item }) => (
+    <section className="item-section">
+        {
+            item.length > 0 ? 
+                item.map(item => 
+                    <Item 
+                        key={item.id} 
+                        title={item.title} 
+                        imgSource={item.imgSource} 
+                        price={item.price} 
+                        stock={item.stock}
+                        id={item.id}
+                    /> ) 
+                : <p>Loading...</p> 
+        }
+    </section>
+)
 
-    useEffect(() => {
-        getProducts(products, 2000)
-        .then((res) => setItems(res))
-        .catch((e) => console.log(e))
-    },[])
-
-    return (
-        <section className="item-section">
-            {
-                items.length > 0 ? 
-                    items.map(item => 
-                        <Item 
-                            key={item.id} 
-                            title={item.title} 
-                            imgSource={item.imgSource} 
-                            price={item.price} 
-                            stock={item.stock}
-                            id={item.id}
-                        /> ) 
-                    : 
-                    <p>Loading...</p> 
-            }
-        </section>
-    )
-}
 
 export default ItemList;

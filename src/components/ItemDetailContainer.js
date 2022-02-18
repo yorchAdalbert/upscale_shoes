@@ -6,7 +6,6 @@ import ItemDetail from "./ItemDetail"
 const ItemDetailContainer = () => {
     const [dato, setDato] = useState([])
     const { id } = useParams()
-    console.log(id)
 
     useEffect(() => {
         getItem(products, 2000)
