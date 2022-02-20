@@ -104,11 +104,11 @@ span.item-counter {
 /*Button count and subtrac*/
 
 .item-count {
-  width: 10.1%;
+  width: 70%;
   height: 1.7rem;
-  margin: 0.5rem 0 0 0.5rem;
   border: 1px solid gray;
   border-radius: 3px;
+  margin: 0.8rem 0 0 1.5rem;
 }
 
 .count {
@@ -128,6 +128,20 @@ span.count:hover {
 .display-items {
   width: 40%;
   user-select: none;
+}
+
+.buy-button {
+  background-color: #643070;
+  color: white;
+}
+
+p.buy-button:hover {
+  user-select: none;
+  cursor: pointer;
+  border: 2px solid #643070;
+  color: #3e1e46;
+  background-color: white;
+  font-size: bold;
 }
 
 /*Item cards*/
@@ -187,4 +201,18 @@ img.img-item {
   width: 450px;
   border: 1px solid #643070;
   box-shadow: 5px 10px 8px #888888;
+}
+
+.item-selection {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1.5rem;
+}
+
+.selecting-item {
+  width: 50%;
+}
+
+.price-section {
+  width: 50%;
 }

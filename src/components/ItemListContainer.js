@@ -6,7 +6,6 @@ import ItemList from './ItemList';
 const ItemListContainer = () => {
     const[sneakers, setSneakers] = useState([])
     const { categoryId } = useParams()
-    console.log(categoryId)
 
     useEffect(() => {
         getItem(products.filter(item => {

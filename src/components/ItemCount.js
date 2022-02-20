@@ -2,7 +2,9 @@ import { useState } from "react";
 
 const ItemCount = ( {stock, initial, onAdd}) => {
     const [items, setItems] = useState(parseInt(initial));
-    const [itemsInStock , setStock] = useState(parseInt(stock - initial));
+    const [itemsInStock , setStock] = useState(stock);
+
+    console.log(itemsInStock)
 
     const addItem = () => {
         if (itemsInStock) {
