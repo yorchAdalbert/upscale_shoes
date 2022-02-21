@@ -4,8 +4,6 @@ const ItemCount = ( {stock, initial, onAdd}) => {
     const [items, setItems] = useState(initial);
     const [itemsInStock , setStock] = useState(stock);
 
-    console.log(itemsInStock)
-
     const addItem = () => {
         if (itemsInStock) {
             setItems(items + 1);

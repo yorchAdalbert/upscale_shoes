@@ -6,7 +6,6 @@ const ItemDetail = ( {item} ) => {
     const[itemSelected, setItemSeleted] = useState(true)
     const[sneakerItems, setSneakerItems] = useState(0)
     let stock = parseInt(item.stock)
-    //console.log(item.stock)
 
     const handelClick= (items) => {
         if (items) 
