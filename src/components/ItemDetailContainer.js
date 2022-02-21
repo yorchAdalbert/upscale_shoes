@@ -4,19 +4,21 @@ import { products, getItem } from "../utils/products"
 import ItemDetail from "./ItemDetail"
 
 const ItemDetailContainer = () => {
-    const [dato, setDato] = useState([])
+    const [dato, setDato] = useState({})
     const { id } = useParams()
+    console.log(dato.hasOwnProperty('id'))
 
     useEffect(() => {
-        getItem(products, 2000)
-        .then((res) => setDato(res[id]))
+        getItem(products.find(item => item.id == id), 2000)
+        .then((res) => setDato(res))
         .catch((error) => console.log(error))
     }, [])
 
     return (
         <section className="item-detail">
             { 
-                <ItemDetail item={dato} />
+                dato.hasOwnProperty('id') ? <ItemDetail item={dato} /> 
+                                          : <p>Loading...</p>
             }
         </section>
     )

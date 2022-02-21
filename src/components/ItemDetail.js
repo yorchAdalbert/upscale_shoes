@@ -4,10 +4,13 @@ import ItemCount from "./ItemCount"
 
 const ItemDetail = ( {item} ) => {
     const[itemSelected, setItemSeleted] = useState(true)
-    const[sneakerItems, setSneakerItems] = useState(1)
+    const[sneakerItems, setSneakerItems] = useState(0)
+    let stock = parseInt(item.stock)
+    //console.log(item.stock)
 
-    const handelClick = () => {
-        if (sneakerItems) setItemSeleted(false)
+    const handelClick= (items) => {
+        if (items) 
+            setItemSeleted(false)
     }
 
     return (
@@ -23,10 +26,7 @@ const ItemDetail = ( {item} ) => {
                         {
                             itemSelected 
                                 ? 
-                                    <>
-                                        <ItemCount stock={parseInt(item.stock)} initial="0" />
-                                        <p className="item-count buy-button" style={{'textAlign': 'center'}} onClick={handelClick} >Terminar compra</p>
-                                    </> 
+                                    <ItemCount stock={stock} initial={sneakerItems} onAdd={handelClick}/>
                                 :
                                    <Link to='/cart' className="text-decor"><p className="item-count buy-button" style={{'textAlign': 'center'}} >Ir al carrito</p> </Link>
                         }
