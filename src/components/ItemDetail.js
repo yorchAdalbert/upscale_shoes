@@ -1,16 +1,18 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
 import ItemCount from "./ItemCount"
+import { useContext } from "react"
+import { CartContext } from "./CartContext"
 
 const ItemDetail = ( {item} ) => {
     const[itemSelected, setItemSeleted] = useState(true)
-    const[sneakerItems, setSneakerItems] = useState(0)
-    let stock = parseInt(item.stock)
+    const { addToCart } = useContext(CartContext)
 
     const handelClick= (items) => {
-        if (items) 
+        if (items) {
             setItemSeleted(false)
-
+            addToCart(item)
+        }
     }
 
     return (
@@ -26,7 +28,7 @@ const ItemDetail = ( {item} ) => {
                         {
                             itemSelected 
                                 ? 
-                                    <ItemCount stock={stock} initial='0' onAdd={handelClick}/>
+                                    <ItemCount stock={parseInt(item.stock)} initial='0' onAdd={handelClick}/>
                                 :
                                    <Link to='/cart' className="text-decor"><p className="item-count buy-button" style={{'textAlign': 'center'}} >Ir al carrito</p> </Link>
                         }
