@@ -10,6 +10,7 @@ const ItemDetail = ( {item} ) => {
     const handelClick= (items) => {
         if (items) 
             setItemSeleted(false)
+
     }
 
     return (
@@ -25,7 +26,7 @@ const ItemDetail = ( {item} ) => {
                         {
                             itemSelected 
                                 ? 
-                                    <ItemCount stock={stock} initial={sneakerItems} onAdd={handelClick}/>
+                                    <ItemCount stock={stock} initial='0' onAdd={handelClick}/>
                                 :
                                    <Link to='/cart' className="text-decor"><p className="item-count buy-button" style={{'textAlign': 'center'}} >Ir al carrito</p> </Link>
                         }
