@@ -17,7 +17,7 @@ const ItemDetailContainer = () => {
         <section className="item-detail">
             { 
                 dato.hasOwnProperty('id') ? <ItemDetail item={dato} /> 
-                                          : <p>Loading...</p>
+                                          :  <p>Loading...</p>
             }
         </section>
     )

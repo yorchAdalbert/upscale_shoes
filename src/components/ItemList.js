@@ -13,7 +13,9 @@ const ItemList = ( { item } ) => (
                         stock={item.stock}
                         id={item.id}
                     /> ) 
-                : <p>Loading...</p> 
+                : <div className="loading-section" >
+                    <p>Loading...</p> 
+                  </div>
         }
     </section>
 )

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const ItemCount = ( {stock, initial, onAdd}) => {
-    const [items, setItems] = useState(parseInt(initial));
+    const [items, setItems] = useState(initial);
     const [itemsInStock , setStock] = useState(stock);
 
     const addItem = () => {
