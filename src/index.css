@@ -160,6 +160,12 @@ p.delete-button:hover {
   color: white;
 }
 
+.regular-button {
+  background-color: #643070;
+  color: white;
+  height: 2rem;
+}
+
 /*Item cards*/
 
 .item-section {
@@ -237,7 +243,7 @@ img.img-item {
 
 .cart-card {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin: 2.5rem;
   width: 60%;
   border: 1px solid #643070;
@@ -248,8 +254,14 @@ img.img-item {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .cart-info {
   width: 100%;
+}
+
+.main-cart {
+  display: flex;
+  flex-direction: row;
 }

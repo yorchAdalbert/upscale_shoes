@@ -5,12 +5,13 @@ import { CartContext } from "./CartContext"
 
 const ItemDetail = ( {item} ) => {
     const[itemSelected, setItemSeleted] = useState(true)
-    const { addToCart } = useContext(CartContext)
+    const { addToCart, sumTotalItems } = useContext(CartContext)
 
     const handelClick= (itemQty) => {
         if (itemQty) {
             setItemSeleted(false)
             addToCart(item, itemQty)
+            sumTotalItems(itemQty)
         }
     }
 
@@ -29,7 +30,10 @@ const ItemDetail = ( {item} ) => {
                                 ? 
                                     <ItemCount stock={parseInt(item.stock)} initial={0} onAdd={handelClick}/>
                                 :
-                                   <Link to='/cart' className="text-decor"><p className="item-count buy-button" style={{'textAlign': 'center'}} >Ir al carrito</p> </Link>
+                                   <>
+                                     <Link to='/cart' className="text-decor"><p className="item-count buy-button" style={{'textAlign': 'center'}} >Terminar compra</p> </Link>
+                                     <Link to='/' className="text-decor"><p className="item-count buy-button" style={{'textAlign': 'center'}} >Seguir comprando</p> </Link>
+                                   </>
                         }
                     </div>
                     <div className="price-section">

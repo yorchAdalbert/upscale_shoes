@@ -4,6 +4,7 @@ export const CartContext = createContext()
 
 const CartContextProvider = ({ children }) => {
     const[cartItems, setCartItems] = useState([])
+    const[totalItems, setTotalItems] = useState(0)
 
     const addToCart = (sneaker, itemQty) => {
         const checkItem = cartItems.find(element => element.id == sneaker.id)
@@ -30,9 +31,12 @@ const CartContextProvider = ({ children }) => {
     const clearCart = () => {
         setCartItems([])
     }
+
+    const sumTotalItems = (num) => setTotalItems(totalItems + num)
+    
     
     return (
-        <CartContext.Provider value={ {cartItems, addToCart, removeItem, clearCart} }>
+        <CartContext.Provider value={ {cartItems, addToCart, removeItem, clearCart, totalItems, sumTotalItems} }>
             {children}
             </CartContext.Provider>
     )
