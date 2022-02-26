@@ -243,9 +243,9 @@ img.img-item {
 
 .cart-card {
   display: flex;
-  flex-direction: column;
-  margin: 2.5rem;
-  width: 60%;
+  flex-direction: row;
+  margin: 2.5rem 2.5rem 0 2.5rem;
+  width: 55%;
   border: 1px solid #643070;
 }
 
@@ -263,5 +263,23 @@ img.img-item {
 
 .main-cart {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+}
+
+.summary {
+  width: 35%;
+  position: absolute;
+  bottom: 10rem;
+  left: 49rem;
+  border: 1px solid #643070;
+}
+
+table,
+th,
+td {
+  border-bottom: 1px solid #b682c0;
+  border-collapse: collapse;
+  margin-left: 1rem;
+  text-align: left;
+  padding-left: 0.5rem;
 }

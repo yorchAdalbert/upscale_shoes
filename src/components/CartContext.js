@@ -16,7 +16,7 @@ const CartContextProvider = ({ children }) => {
                 title: sneaker.title,
                 image: sneaker.imgSource,
                 price: sneaker.price,
-                quantity: itemQty
+                quantity: itemQty,
             }])
         else
            checkItem.quantity += itemQty
@@ -33,10 +33,9 @@ const CartContextProvider = ({ children }) => {
     }
 
     const sumTotalItems = (num) => setTotalItems(totalItems + num)
-    
-    
+
     return (
-        <CartContext.Provider value={ {cartItems, addToCart, removeItem, clearCart, totalItems, sumTotalItems} }>
+        <CartContext.Provider value={ {cartItems, addToCart, removeItem, clearCart, totalItems, sumTotalItems } }>
             {children}
             </CartContext.Provider>
     )
