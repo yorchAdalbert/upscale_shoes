@@ -1,19 +1,26 @@
+import ItemList from './ItemList';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { getItem, products } from '../utils/products';
-import ItemList from './ItemList';
+import { collection, getDocs } from "firebase/firestore";
+import db from '../utils/fireBaseConfig';
+
 
 const ItemListContainer = () => {
     const[sneakers, setSneakers] = useState([])
     const { categoryId } = useParams()
 
     useEffect(() => {
-        getItem(products.filter(item => {
-            if (categoryId === undefined) return item
-            return item.category === categoryId
-        }), 2000)
-            .then( result => setSneakers(result) )
-            .catch( error => console.log(error) )
+        const dataBaseFetch = async () => {
+            const querySnapshot = await getDocs(collection(db, "products"));
+            const dataBaseData = querySnapshot.docs.map(document => ({
+                id: document.id, 
+                ...document.data()
+            }))
+            return dataBaseData
+        }
+        dataBaseFetch()
+            .then(data => setSneakers(data))
+            .catch(error => console.log(error))
     }, [sneakers])
 
     return (

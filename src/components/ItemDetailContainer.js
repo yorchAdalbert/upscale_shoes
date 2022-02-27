@@ -1,22 +1,32 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import { products, getItem } from "../utils/products"
 import ItemDetail from "./ItemDetail"
+import db from "../utils/fireBaseConfig"
+import { doc, getDoc } from "firebase/firestore";
 
 const ItemDetailContainer = () => {
     const [dato, setDato] = useState({})
     const { id } = useParams()
 
     useEffect(() => {
-        getItem(products.find(item => item.id == id), 2000)
-        .then((res) => setDato(res))
-        .catch((error) => console.log(error))
+        const getOneData = async () => {
+            const docRef = doc(db, "products", id);
+            const docSnap = await getDoc(docRef);
+
+            return docSnap.data()
+        }
+
+        getOneData()
+            .then(data => setDato(data))
+            .catch(e => console.log(e))
+
     }, [])
+
 
     return (
         <section className="item-detail">
             { 
-                dato.hasOwnProperty('id') ? <ItemDetail item={dato} /> 
+                dato.hasOwnProperty('title') ? <ItemDetail item={dato} /> 
                                           :  <p>Loading...</p>
             }
         </section>
