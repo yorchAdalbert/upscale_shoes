@@ -13,7 +13,9 @@ const ItemDetailContainer = () => {
             const docRef = doc(db, "products", id);
             const docSnap = await getDoc(docRef);
 
-            return docSnap.data()
+            const sneaker = docSnap.data()
+            sneaker.id = id
+            return sneaker
         }
 
         getOneData()

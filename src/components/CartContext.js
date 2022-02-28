@@ -25,7 +25,6 @@ const CartContextProvider = ({ children }) => {
     const removeItem = (itemId) => {
         const filterCartItem = cartItems.filter(element => element.id != itemId)
         setCartItems(filterCartItem)
-
     }
 
     const clearCart = () => {
@@ -35,7 +34,7 @@ const CartContextProvider = ({ children }) => {
     const sumTotalItems = (num) => setTotalItems(totalItems + num)
 
     return (
-        <CartContext.Provider value={ {cartItems, addToCart, removeItem, clearCart, totalItems, sumTotalItems } }>
+        <CartContext.Provider value={ {cartItems, addToCart, removeItem, clearCart, totalItems, sumTotalItems} }>
             {children}
             </CartContext.Provider>
     )

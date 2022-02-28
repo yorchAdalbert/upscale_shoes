@@ -55,6 +55,7 @@ p {
   padding: 1.2rem;
   font-size: 1.5rem;
   font-weight: 600;
+  margin-left: 1.5rem;
 }
 
 .categories li {
@@ -88,7 +89,7 @@ span.item-counter {
 }
 
 .cart-shoping-area {
-  margin-right: 1.2rem;
+  margin-right: 2rem;
 }
 
 /* Items Section*/
@@ -150,7 +151,8 @@ p.delete-button {
   font-size: bold;
   height: 2rem;
   border-radius: 3px;
-  width: 30%;
+  width: 45%;
+  margin-left: 8.1rem;
 }
 
 p.delete-button:hover {
@@ -164,6 +166,18 @@ p.delete-button:hover {
   background-color: #643070;
   color: white;
   height: 2rem;
+}
+
+p.purple {
+  color: white;
+  background-color: #643070;
+  border-color: #643070;
+}
+
+p.purple:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #643070;
 }
 
 /*Item cards*/
@@ -244,9 +258,14 @@ img.img-item {
 .cart-card {
   display: flex;
   flex-direction: row;
-  margin: 2.5rem 2.5rem 0 2.5rem;
-  width: 55%;
-  border: 1px solid #643070;
+  width: 100%;
+  border: 2px solid #643070;
+  margin-bottom: 1rem;
+}
+
+.cart-card img {
+  width: 10rem;
+  height: 10rem;
 }
 
 .loading-section {
@@ -261,19 +280,6 @@ img.img-item {
   width: 100%;
 }
 
-.main-cart {
-  display: flex;
-  flex-direction: column;
-}
-
-.summary {
-  width: 35%;
-  position: absolute;
-  bottom: 10rem;
-  left: 49rem;
-  border: 1px solid #643070;
-}
-
 table,
 th,
 td {
@@ -282,4 +288,33 @@ td {
   margin-left: 1rem;
   text-align: left;
   padding-left: 0.5rem;
+}
+
+.detail-table {
+  margin: 0.8rem;
+  margin-left: 8rem;
+}
+
+.summary-table {
+  margin-top: 1.5rem;
+  margin-left: 6rem;
+}
+
+.cartDetail-container {
+  display: grid;
+  grid-template-columns: 55% 40%;
+  grid-gap: 0 2rem;
+  margin: 2rem;
+}
+
+.cartDetail-box {
+  width: 100%;
+}
+
+.summary-box {
+  width: 100%;
+}
+
+.total-price {
+  margin-top: 1.5rem;
 }
