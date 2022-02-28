@@ -8,6 +8,7 @@ import db from '../utils/fireBaseConfig';
 const ItemListContainer = () => {
     const[sneakers, setSneakers] = useState([])
     const { categoryId } = useParams()
+    console.log(categoryId)
 
     useEffect(() => {
         const dataBaseFetch = async () => {
@@ -16,8 +17,14 @@ const ItemListContainer = () => {
                 id: document.id, 
                 ...document.data()
             }))
-            return dataBaseData
+
+            if (categoryId === undefined)
+                return dataBaseData
+
+            return dataBaseData.filter(elem => elem.category === categoryId)
+
         }
+
         dataBaseFetch()
             .then(data => setSneakers(data))
             .catch(error => console.log(error))

@@ -5,7 +5,7 @@ import { CartContext } from "./CartContext"
 
 const ItemDetail = ( {item} ) => {
     const[itemSelected, setItemSeleted] = useState(true)
-    const { addToCart, sumTotalItems, setTotalCost } = useContext(CartContext)
+    const { addToCart, sumTotalItems } = useContext(CartContext)
 
     const handelClick= (itemQty) => {
         if (itemQty) {
